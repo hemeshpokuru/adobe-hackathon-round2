@@ -1,38 +1,30 @@
 import React, { useEffect } from 'react';
 
-const PdfViewer = () => {
+const PdfViewer = ({ uploadedPDF }) => {
   useEffect(() => {
-    // Wait for Adobe API to be ready
-    if (window.AdobeDC) {
-      loadPDF();
-    } else {
-      document.addEventListener("adobe_dc_view_sdk.ready", loadPDF);
-    }
+    if (!uploadedPDF) return;
 
-    function loadPDF() {
+    const showPDF = () => {
       const adobeDCView = new window.AdobeDC.View({
-        clientId: "4c9fb13580e3496db2eb7faee352be41", // ⬅️ Replace this!
+        clientId: "4c9fb13580e3496db2eb7faee352be41",
         divId: "adobe-dc-view"
       });
 
       adobeDCView.previewFile({
         content: {
-          location: {
-            url: "/sample.pdf"
-          }
+          promise: Promise.resolve(uploadedPDF.base64)
         },
         metaData: {
-          fileName: "sample.pdf"
+          fileName: uploadedPDF.file.name
         }
-      }, {
-        embedMode: "SIZED_CONTAINER"
-      });
-    }
-  }, []);
+      }, { embedMode: "SIZED_CONTAINER" });
+    };
 
-  return (
-    <div id="adobe-dc-view" style={{ height: "600px", width: "100%" }}></div>
-  );
+    if (window.AdobeDC) showPDF();
+    else document.addEventListener("adobe_dc_view_sdk.ready", showPDF);
+  }, [uploadedPDF]);
+
+  return <div id="adobe-dc-view" style={{ height: "600px", width: "100%" }}></div>;
 };
 
 export default PdfViewer;

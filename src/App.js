@@ -1,10 +1,12 @@
 import React from 'react';
 import PdfViewer from './PdfViewer';
+import OutlineSidebar from './OutlineSidebar';
+import './App.css';
 
 function App() {
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>📘 Adobe Hackathon - Smart PDF Viewer</h2>
+    <div className="app-container">
+      <OutlineSidebar />
       <PdfViewer />
     </div>
   );

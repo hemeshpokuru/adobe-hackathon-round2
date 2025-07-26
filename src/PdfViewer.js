@@ -11,7 +11,7 @@ const PdfViewer = () => {
 
     function loadPDF() {
       const adobeDCView = new window.AdobeDC.View({
-        clientId: "3baa516b4b4e4608be4e2cd3fa0871b3", // ⬅️ Replace this!
+        clientId: "4c9fb13580e3496db2eb7faee352be41", // ⬅️ Replace this!
         divId: "adobe-dc-view"
       });
 

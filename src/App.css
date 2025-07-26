@@ -109,3 +109,31 @@
   border-left: 4px solid #2196f3;
   border-radius: 5px;
 }
+.keywords-box {
+  background-color: #fefce8;
+  border-left: 4px solid #facc15;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.keywords-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.keyword-btn {
+  padding: 5px 10px;
+  background-color: #fcd34d;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.keyword-btn:hover {
+  background-color: #fbbf24;
+}

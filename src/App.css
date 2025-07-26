@@ -88,3 +88,24 @@
   padding-left: 20px;
   color: #555;
 }
+.persona-box {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #eef;
+  border-radius: 10px;
+}
+
+.persona-box select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.summary-box {
+  margin-top: 12px;
+  background-color: #fff;
+  padding: 8px;
+  border-left: 4px solid #2196f3;
+  border-radius: 5px;
+}

@@ -21,6 +21,10 @@ const OutlineSidebar = () => {
       });
     }
   };
+  const handleHeadingClick = (heading) => {
+    window.highlightHeading(heading); // Call the viewer highlight logic
+  };
+
 
   return (
     <div className="sidebar">

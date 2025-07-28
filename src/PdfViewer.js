@@ -1,3 +1,4 @@
+/*
 import React, { useEffect } from 'react';
 
 const PdfViewer = () => {
@@ -44,5 +45,38 @@ const highlightHeading = (heading) => {
   }, []);
 };
 
+
+export default PdfViewer;
+*/
+
+import React, { useEffect, useRef } from 'react';
+
+const PdfViewer = ({ file }) => {
+  const viewerRef = useRef(null);
+
+  useEffect(() => {
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const base64PDF = e.target.result.split(',')[1];
+
+      if (window.AdobeDC) {
+        const adobeDCView = new window.AdobeDC.View({
+          clientId: "4c9fb13580e3496db2eb7faee352be41",
+          divId: "adobe-dc-view",
+        });
+
+        adobeDCView.previewFile({
+          content: { base64: base64PDF },
+          metaData: { fileName: file.name },
+        });
+      }
+    };
+    reader.readAsDataURL(file);
+  }, [file]);
+
+  return <div id="adobe-dc-view" ref={viewerRef} style={{ height: '800px' }}></div>;
+};
 
 export default PdfViewer;

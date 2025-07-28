@@ -89,25 +89,34 @@
   color: #555;
 }
 .persona-box {
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: #eef;
-  border-radius: 10px;
+  background-color: #f5f7ff;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  text-align: center;
+  padding: 1rem;
+  width: 90%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+.persona-box select {
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-.persona-box select {
-  width: 100%;
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 1rem;
+.persona-box h3 {
+  margin-bottom: 0.5rem;
 }
 
 .summary-box {
-  margin-top: 12px;
+  margin-top: 1rem;
   background-color: #fff;
-  padding: 8px;
-  border-left: 4px solid #2196f3;
-  border-radius: 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: left;
 }
 .keywords-box {
   background-color: #fefce8;
@@ -174,7 +183,6 @@
 .file-upload-input {
   display: none;
 }
-
 .file-name {
   font-size: 0.9rem;
   color: #333;

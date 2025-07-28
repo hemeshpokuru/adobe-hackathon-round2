@@ -137,3 +137,46 @@
 .keyword-btn:hover {
   background-color: #fbbf24;
 }
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.file-upload-container {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f5f7ff;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+}
+
+.file-upload-label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.file-upload-label:hover {
+  background-color: #357ae8;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.file-name {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 0.5rem;
+}

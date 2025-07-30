@@ -71,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### App Deplayment link
 
-This section has moved here: [adobe-hackathon-round2.vercel.app](adobe-hackathon-round2.vercel.app)
+This section has moved here: [https://adobe-hackathon-round2.vercel.app/](https://adobe-hackathon-round2.vercel.app/)
